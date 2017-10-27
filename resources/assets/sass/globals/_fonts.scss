@@ -1,0 +1,38 @@
+body {
+    font-family: $FONT_FAMILY;
+    font-size: $FONT_SIZE_BASE;
+    font-weight: $FONT_WEIGHT_BOOK;
+    line-height: $LINE_HEIGHT_BASE;
+    color: $COLOR_BLACK_LIGHT;
+    @include md-devices {
+        font-size: 18px;
+    }
+}
+
+/* texts */
+
+
+
+/* buttons */
+
+.a-button {
+    font-weight: $FONT_WEIGHT_BOLD;
+}
+
+/* input */
+
+input[type='text'] {
+    font-weight: $FONT_WEIGHT_BOOK;
+}
+::-webkit-input-placeholder {
+    font-weight: $FONT_WEIGHT_BOOK;
+}
+::-moz-placeholder {
+    font-weight: $FONT_WEIGHT_BOOK;
+}
+:-ms-input-placeholder {
+    font-weight: $FONT_WEIGHT_BOOK;
+}
+:-moz-placeholder {
+    font-weight: $FONT_WEIGHT_BOOK;
+}

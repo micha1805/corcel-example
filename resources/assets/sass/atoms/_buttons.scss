@@ -1,0 +1,32 @@
+.a-button {
+	background-color: $COLOR_ORANGE;
+	color: $COLOR_WHITE;
+	font-size: $FONT_SIZE_BASE;
+	width: 210px;
+	min-height: 48px;
+	padding-top: 17px;
+    padding-bottom: 17px;
+	display: block;
+	border: 0 none;
+	text-decoration: none;
+    cursor: pointer;
+
+    transition: background-color 0.4s ease-in;
+
+    &:hover {
+        background-color: $COLOR_GREY;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:disabled,
+    &[disabled] {
+        background-color: #e1e1e1;
+        cursor: default;
+    }
+
+    @include md-devices {
+	    min-height: 53px;
+	    max-width: 200px;
+	    font-size: 18px;
+	}
+}

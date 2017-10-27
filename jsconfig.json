@@ -1,0 +1,19 @@
+{
+    "include": [
+        "./resources/assets/js/**/*"
+    ],
+    "compilerOptions": {
+        "baseUrl": "./resources/assets/js/components",
+        "paths": {
+            "atoms/*": [
+                "atoms/*"
+            ],
+            "molecules/*": [
+                "molecules/*"
+            ],
+            "views/*": [
+                "views/*"
+            ]
+        }
+    }
+}

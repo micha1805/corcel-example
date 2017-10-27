@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteBase /
+
+    # Condition: all URIs, except /admin
+    RewriteCond %{REQUEST_URI} !^/admin/
+    # Rule: go to /public
+    RewriteRule ^(.*)$ /public/$1 [L]
+</IfModule>

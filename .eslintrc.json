@@ -1,0 +1,89 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base",
+        "plugin:vue/recommended"
+    ],
+    "rules": {
+        "func-names": [
+            "off"
+        ],
+        "global-require": [
+            "off"
+        ],
+        "import/extensions": [
+            "off"
+        ],
+        "import/no-extraneous-dependencies": [
+            "off"
+        ],
+        "import/no-unresolved": [
+            "off"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "max-len": [
+            "off"
+        ],
+        "no-console": [
+            "off"
+        ],
+        "vue/html-quotes": [
+            "error",
+            "double"
+        ],
+        "vue/no-async-in-computed-properties": [
+            "error"
+        ],
+        "vue/no-dupe-keys": [
+            "error"
+        ],
+        "vue/no-duplicate-attributes": [
+            "error"
+        ],
+        "vue/no-reserved-keys": [
+            "error"
+        ],
+        "vue/no-shared-component-data": [
+            "error"
+        ],
+        "vue/no-side-effects-in-computed-properties": [
+            "error"
+        ],
+        "vue/no-template-key": [
+            "error"
+        ],
+        "vue/order-in-components": [
+            "error"
+        ],
+        "vue/require-default-prop": [
+            "error"
+        ],
+        "vue/require-prop-types": [
+            "error"
+        ],
+        "vue/require-valid-default-prop": [
+            "error"
+        ],
+        "vue/return-in-computed-property": [
+            "error"
+        ],
+        "vue/this-in-template": [
+            "error"
+        ]
+    }
+}

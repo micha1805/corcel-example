@@ -1,0 +1,32 @@
+.a-input {
+    display: block;
+    width: 280px;
+    height: 48px;
+    padding: 0px 20px;
+    background-color: $COLOR_WHITE;
+    border: 1px solid $COLOR_BLACK_LIGHT;
+    font-size: $FONT_SIZE_BASE;
+
+    ::-webkit-input-placeholder {
+        color: $COLOR_GREY;
+    }
+    ::-moz-placeholder {
+      color: $COLOR_GREY;
+    }
+    :-ms-input-placeholder {
+        color: $COLOR_GREY;
+    }
+    :-moz-placeholder {
+        color: $COLOR_GREY;
+    }
+
+    @include md-devices {
+      width: 416px;
+      height: 60px;
+      font-size: 18px;
+    }
+
+    @include lg-devices {
+      width: 350px;
+    }
+}
