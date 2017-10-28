@@ -241,25 +241,45 @@ Also, we will use [Sass](http://sass-lang.com/) processing, the most mature, sta
 
 Clone this repository:
 
-```
-$ git clone https://<your-username>@bitbucket.org/binalogue/<project-name>.git
+```bash
+$ git clone https://github.com/mgoigfer/corcel-example.git
 ```
 
 Run Composer:
 
-```
+```bash
 $ composer install
 ```
 
 Run npm:
 
-```
+```bash
 $ npm install
+```
+
+Create a WordPress (used by Corcel) database:
+
+```bash
+$ mysql --host=localhost -uroot -proot -e "create database corcel;"
+```
+
+Init the WordPress installation to create all the database tables automatically. We do this going to [http://localhost:8888/admin](http://localhost:8888/admin).
+
+Create a Laravel database:
+
+```bash
+$ mysql --host=localhost -uroot -proot -e "create database laravel;"
+```
+
+Migrate and seed the Laravel database:
+
+```bash
+$ php artisan migrate --seed
 ```
 
 ### Build commands
 
-* `$ php artisan serve` — Compile and optimize the files in your assets directory
+* `$ npm run watch` —  Will continue running in your terminal and watch all relevant files for changes, recompiling your assets when it detects a change
 
 ## Project structure
 

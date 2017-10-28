@@ -20,6 +20,8 @@ Route::get('/sample-page', 'PagesController@showSamplePage')
 Route::get('/messages/{message}', 'MessagesController@show')
     ->name('message');
 
+Route::get('/{username}', 'UsersController@show');
+
 Route::post('/messages/create', 'MessagesController@create')
     ->middleware('auth');
 

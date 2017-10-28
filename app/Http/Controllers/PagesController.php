@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function showWelcome()
     {
-        $messages = Message::paginate(10);
+        $messages = Message::latest()->paginate(10);
         $navLinks = NavLinksTrait::getNavLinks();
 
         return view('welcome', [

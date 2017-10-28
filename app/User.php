@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function messages()
+    {
+        return $this
+            ->hasMany(Message::Class)
+            ->orderBy('created_at', 'desc');
+    }
 }

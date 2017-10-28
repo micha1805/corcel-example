@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('slug', 'message')
+@section('slug', 'showMessage')
 
 @section('title', 'Message | Corcel')
 
