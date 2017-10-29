@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="row">
-    <form action="/messages/create" method="POST">
+    <form action="/message/create" method="POST">
         <div class="form-group">
             {{ csrf_field() }}
 

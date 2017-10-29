@@ -169,6 +169,7 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         Corcel\Laravel\CorcelServiceProvider::class,
+        Laravel\Socialite\SocialiteServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
 
         /*
@@ -230,6 +231,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 

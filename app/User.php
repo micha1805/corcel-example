@@ -27,10 +27,34 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function followers()
+    {
+        return $this
+            ->belongsToMany(User::Class, 'followers', 'followed_id', 'user_id');
+    }
+
+    public function follows()
+    {
+        return $this
+            ->belongsToMany(User::Class, 'followers', 'user_id', 'followed_id');
+    }
+
+    public function isFollowing(User $user)
+    {
+        return $this
+            ->follows->contains($user);
+    }
+
     public function messages()
     {
         return $this
             ->hasMany(Message::Class)
             ->orderBy('created_at', 'desc');
+    }
+
+    public function socialProfiles()
+    {
+        return $this
+            ->hasMany(SocialProfile::Class);
     }
 }

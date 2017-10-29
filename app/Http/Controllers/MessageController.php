@@ -7,18 +7,8 @@ use App\Http\Traits\NavLinksTrait;
 use App\Message;
 use Illuminate\Http\Request;
 
-class MessagesController extends Controller
+class MessageController extends Controller
 {
-    public function show(Message $message)
-    {
-        $navLinks = NavLinksTrait::getNavLinks();
-
-        return view('messages.show', [
-            'message' => $message,
-            'navLinks' => $navLinks,
-        ]);
-    }
-
     public function create(CreateMessageRequest $request)
     {
         $user = $request->user();
@@ -29,6 +19,16 @@ class MessagesController extends Controller
             'user_id' => $user->id,
         ]);
 
-        return redirect('/messages/' . $message->id);
+        return redirect('/message/' . $message->id);
+    }
+
+    public function show(Message $message)
+    {
+        $navLinks = NavLinksTrait::getNavLinks();
+
+        return view('messages.show', [
+            'message' => $message,
+            'navLinks' => $navLinks,
+        ]);
     }
 }

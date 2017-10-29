@@ -3,14 +3,14 @@
 <p class="card-text">
     <div class="text-muted">
         Escrito por:
-        <a href="/{{ $message->user->username }}">
+        <a href="/user/{{ $message->user->username }}">
             {{ $message->user->name }}
         </a>
     </div>
 
     {{ $message->content }}
 
-    <a href="/messages/{{ $message->id }}">
+    <a href="/message/{{ $message->id }}">
         Leer más
     </a>
 

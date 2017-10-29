@@ -7,7 +7,7 @@ use App\Message;
 use Corcel\Model\Page;
 use Illuminate\Http\Request;
 
-class PagesController extends Controller
+class PageController extends Controller
 {
     public function showWelcome()
     {
