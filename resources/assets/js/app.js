@@ -6,6 +6,7 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import Vue from 'vue';
 import PxLoader from 'pxloader';
 import 'pxloader/PxLoaderImage.js';
 
@@ -27,6 +28,7 @@ import './bootstrap';
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
     const Sage = {
+
         // All pages
         common: {
             init() {
@@ -84,11 +86,24 @@ import './bootstrap';
                 // });
             },
         },
+
+        messageShow: {
+            init() {
+                console.log('=> app.message.init()');
+
+                Vue.component('responses', require('molecules/Responses.vue'));
+                new Vue().$mount('#app');
+            },
+        },
+
         welcome: {
             init() {
                 console.log('=> app.welcome.init()');
 
                 this.loadImagesBeforeShowing();
+
+                Vue.component('notifications', require('molecules/Notifications.vue'));
+                new Vue().$mount('#app');
             },
             fadeOutWhiteWrapper() {
                 console.log('=> app.welcome.fadeOutWhiteWrapper()');

@@ -3,16 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Conversation;
-use App\Http\Traits\NavLinksTrait;
 use App\PrivateMessage;
 use App\User;
+use App\Http\Traits\NavLinksTrait;
+use App\Notifications\UserFollowed;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
     private function findByUsername($username)
     {
-        return User::where('username', $username)->first();
+        return User::where('username', $username)->firstOrFail();
     }
 
     public function follow($username, Request $request)
@@ -25,8 +26,16 @@ class UserController extends Controller
         //* Follow user
         $me->follows()->attach($user);
 
+        //* Notify user by email
+        $user->notify(new UserFollowed($me));
+
         //* Redirect to the followed user profile view
         return redirect('/user/' . $username)->withSuccess('Usuario seguido');
+    }
+
+    public function getNotifications(Request $request)
+    {
+        return $request->user()->notifications;
     }
 
     public function sendPrivateMessage($username, Request $request)
@@ -50,7 +59,7 @@ class UserController extends Controller
             'user_id' => $me->id,
         ]);
 
-        return redirect('/conversations/' . $conversation->id);
+        return redirect('/conversation/' . $conversation->id);
     }
 
     public function showFollowers($username)

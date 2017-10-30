@@ -12,14 +12,35 @@ class MessageController extends Controller
     public function create(CreateMessageRequest $request)
     {
         $user = $request->user();
+        $image = $request->file('image');
 
         $message = Message::create([
             'content' => $request->input('message'),
-            'image' => 'http://lorempixel.com/600/338?' . random_int(0, 100),
+            'image' => $image->store('message', 'public'),
             'user_id' => $user->id,
         ]);
 
         return redirect('/message/' . $message->id);
+    }
+
+    public function getResponses(Message $message)
+    {
+        return $message->responses;
+    }
+
+    public function search(Request $request)
+    {
+        $navLinks = NavLinksTrait::getNavLinks();
+
+        //* Get all messages that match the query, and then load its users
+        $query = $request->input('query');
+        $messages = Message::search($query)->get();
+        $messages->load('user');
+
+        return view('messages.index', [
+            'messages' => $messages,
+            'navLinks' => $navLinks,
+        ]);
     }
 
     public function show(Message $message)

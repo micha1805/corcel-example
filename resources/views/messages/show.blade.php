@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('slug', 'message')
+@section('slug', 'messageShow')
 
 @section('title', 'Message | Corcel')
 
@@ -11,5 +11,7 @@
     </h1>
 
     @include('messages.message')
+
+    <responses :message="{{ $message->id }}"></responses>
 </div>
 @endsection

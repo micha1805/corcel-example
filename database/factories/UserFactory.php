@@ -13,6 +13,23 @@ use Faker\Generator as Faker;
 |
 */
 
+$factory->define(App\Message::class, function (Faker $faker) {
+    return [
+        'content' => $faker->realText(random_int(20, 160)),
+        'created_at' => $faker->dateTimeThisDecade,
+        'image' => $faker->imageUrl(600, 338),
+        'updated_at' => $faker->dateTimeThisDecade,
+    ];
+});
+
+$factory->define(App\Response::class, function (Faker $faker) {
+    return [
+        'created_at' => $faker->dateTimeThisDecade,
+        'message' => $faker->realText(random_int(20, 60)),
+        'updated_at' => $faker->dateTimeThisDecade,
+    ];
+});
+
 $factory->define(App\User::class, function (Faker $faker) {
     static $password;
 
@@ -23,14 +40,5 @@ $factory->define(App\User::class, function (Faker $faker) {
         'password' => $password ?: $password = bcrypt('secret'),
         'remember_token' => str_random(10),
         'username' => $faker->unique()->userName,
-    ];
-});
-
-$factory->define(App\Message::class, function (Faker $faker) {
-    return [
-        'content' => $faker->realText(random_int(20, 160)),
-        'created_at' => $faker->dateTimeThisDecade,
-        'image' => $faker->imageUrl(600, 338),
-        'updated_at' => $faker->dateTimeThisDecade,
     ];
 });
