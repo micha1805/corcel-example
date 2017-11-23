@@ -1186,6 +1186,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_pxloader_PxLoaderImage_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_pxloader_PxLoaderImage_js__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bootstrap__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__bootstrap___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__bootstrap__);
+/* global jQuery */
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -1466,7 +1467,6 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// PxLoader plug
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
 window._ = __webpack_require__(12);
 
 /**
@@ -1476,10 +1476,12 @@ window._ = __webpack_require__(12);
  */
 
 try {
+  /* eslint-disable no-multi-assign */
   window.$ = window.jQuery = __webpack_require__(15);
-
   __webpack_require__(16);
 } catch (e) {}
+// console.log('ERROR: Failed jQuery and/or Bootstrap jQuery plugin loading');
+
 
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
@@ -1501,9 +1503,9 @@ var token = document.head.querySelector('meta[name="csrf-token"]');
 
 if (token) {
   window.axios.defaults.headers.common['X-CSRF-TOKEN'] = token.content;
-} else {
-  console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
-}
+} else {}
+// console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token' );
+
 
 /**
  * Echo exposes an expressive API for subscribing to channels and listening

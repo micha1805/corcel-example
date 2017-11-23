@@ -1,6 +1,7 @@
 /* global __dirname, path */
 
 const mix = require('laravel-mix');
+const WebpackMonitor = require('webpack-monitor');
 
 /*
  |--------------------------------------------------------------------------
@@ -22,6 +23,13 @@ mix.webpackConfig({
             views: path.resolve(__dirname, 'resources/assets/js/components/views/'),
         },
     },
+    plugins: [
+        new WebpackMonitor({
+            capture: true,
+            launch: true,
+            port: 8081,
+        }),
+    ],
 });
 
 mix
