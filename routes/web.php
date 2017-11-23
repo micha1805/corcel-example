@@ -21,23 +21,33 @@ Route::post('/auth/facebook/register', 'SocialAuthController@register');
 
 //* Routes that need authentication
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/conversations/{conversation}', 'ConversationController@showConversation');
+    //* Conversation routes
+    Route::get('/conversation/{conversation}', 'ConversationController@showConversation');
+
+    //* Message routes
     Route::post('/message/create', 'MessageController@create');
+
+    //* User routes
     Route::post('/user/{username}/dms', 'UserController@sendPrivateMessage');
     Route::post('/user/{username}/follow', 'UserController@follow');
     Route::post('/user/{username}/unfollow', 'UserController@unfollow');
+
+    //* API
+    Route::get('/api/notifications', 'UserController@getNotifications');
 });
 
 //* Pages routes
-Route::get('/', 'PageController@showWelcome')
-    ->name('welcome');
-Route::get('/sample-page', 'PageController@showSamplePage')
-    ->name('sample-page');
+Route::get('/', 'PageController@showWelcome')->name('welcome');
+Route::get('/sample-page', 'PageController@showSamplePage')->name('sample-page');
 
 //* Messages routes
 Route::get('/message/{message}', 'MessageController@show');
+Route::post('/message/search', 'MessageController@search');
 
 //* User routes
 Route::get('/user/{username}', 'UserController@showProfile');
 Route::get('/user/{username}/follows', 'UserController@showFollows');
 Route::get('/user/{username}/followers', 'UserController@showFollowers');
+
+//* API
+Route::get('/api/message/{message}/responses', 'MessageController@getResponses');

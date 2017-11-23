@@ -9,11 +9,14 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "algolia/algoliasearch-client-php": "^1.23",
         "fideloper/proxy": "~3.3",
         "jgrossi/corcel": "^2.5",
         "laravel/framework": "5.5.*",
+        "laravel/scout": "^3.0",
         "laravel/socialite": "^3.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "pusher/pusher-php-server": "^3.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.1",

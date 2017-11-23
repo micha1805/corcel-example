@@ -1,3 +1,5 @@
+import Echo from 'laravel-echo';
+
 window._ = require('lodash');
 
 /**
@@ -9,7 +11,8 @@ window._ = require('lodash');
 try {
     /* eslint-disable no-multi-assign */
     window.$ = window.jQuery = require('jquery');
-    require('bootstrap-sass');
+    window.Popper = require('popper.js');
+    require('bootstrap');
 } catch (e) {
     // console.log('ERROR: Failed jQuery and/or Bootstrap jQuery plugin loading');
 }
@@ -44,11 +47,9 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
-// import Echo from 'laravel-echo'
+window.Pusher = require('pusher-js');
 
-// window.Pusher = require('pusher-js');
-
-// window.Echo = new Echo({
-//     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
-// });
+window.Echo = new Echo({
+    broadcaster: 'pusher',
+    key: '850ebd934bfaeeabcacb',
+});

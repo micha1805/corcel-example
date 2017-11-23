@@ -6,10 +6,10 @@
 
 @section('content')
 <div class="row">
-    <form action="/message/create" method="POST">
-        <div class="form-group">
-            {{ csrf_field() }}
+    <form action="/message/create" method="POST" enctype="multipart/form-data">
+        {{ csrf_field() }}
 
+        <div class="form-group">
             <input class="form-control @if ($errors->has('message')) is-invalid @endif" type="text" name="message" placeholder="Qué estás pensando?" />
 
             @if ($errors->has('message'))
@@ -17,6 +17,8 @@
                     <strong>{{ $errors->first('message') }}</strong>
                 </span>
             @endif
+
+            <input class="form-control-file" type="file" name="image" />
         </div>
     </form>
 </div>
