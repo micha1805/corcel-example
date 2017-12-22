@@ -1,0 +1,230 @@
+[
+  {
+    "timeStamp": 1509299895337,
+    "time": 5616,
+    "hash": "b79818737c213aff9719",
+    "errors": [],
+    "size": 968497,
+    "assets": [
+      {
+        "name": "/scripts/app.js",
+        "chunks": [
+          0
+        ],
+        "size": 953136,
+        "miniSize": 810726,
+        "minified": false
+      },
+      {
+        "name": "/styles/app.css",
+        "chunks": [
+          0
+        ],
+        "size": 15361
+      }
+    ],
+    "chunks": [
+      {
+        "size": 946074,
+        "files": [
+          "/scripts/app.js",
+          "/styles/app.css"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/axios/lib/utils.js",
+            "size": 7558,
+            "id": 0
+          },
+          {
+            "name": "./node_modules/axios/lib/defaults.js",
+            "size": 2316,
+            "id": 1
+          },
+          {
+            "name": "./node_modules/pxloader/PxLoader.js",
+            "size": 14222,
+            "id": 2
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/bind.js",
+            "size": 256,
+            "id": 3
+          },
+          {
+            "name": "./node_modules/axios/lib/adapters/xhr.js",
+            "size": 6175,
+            "id": 4
+          },
+          {
+            "name": "./node_modules/axios/lib/core/createError.js",
+            "size": 625,
+            "id": 5
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/isCancel.js",
+            "size": 102,
+            "id": 6
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/Cancel.js",
+            "size": 385,
+            "id": 7
+          },
+          {
+            "name": "multi ./resources/assets/js/app.js ./resources/assets/sass/app.scss",
+            "size": 40,
+            "id": 8
+          },
+          {
+            "name": "./resources/assets/js/app.js",
+            "size": 5580,
+            "id": 9
+          },
+          {
+            "name": "./node_modules/pxloader/PxLoaderImage.js",
+            "size": 3597,
+            "id": 10
+          },
+          {
+            "name": "./resources/assets/js/bootstrap.js",
+            "size": 1719,
+            "id": 11
+          },
+          {
+            "name": "./node_modules/lodash/lodash.js",
+            "size": 539588,
+            "id": 12
+          },
+          {
+            "name": "(webpack)/buildin/global.js",
+            "size": 488,
+            "id": 13
+          },
+          {
+            "name": "(webpack)/buildin/module.js",
+            "size": 495,
+            "id": 14
+          },
+          {
+            "name": "./node_modules/jquery/dist/jquery.js",
+            "size": 268039,
+            "id": 15
+          },
+          {
+            "name": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+            "size": 69707,
+            "id": 16
+          },
+          {
+            "name": "./node_modules/axios/index.js",
+            "size": 40,
+            "id": 17
+          },
+          {
+            "name": "./node_modules/axios/lib/axios.js",
+            "size": 1368,
+            "id": 18
+          },
+          {
+            "name": "./node_modules/is-buffer/index.js",
+            "size": 717,
+            "id": 19
+          },
+          {
+            "name": "./node_modules/axios/lib/core/Axios.js",
+            "size": 2448,
+            "id": 20
+          },
+          {
+            "name": "./node_modules/process/browser.js",
+            "size": 5418,
+            "id": 21
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+            "size": 357,
+            "id": 22
+          },
+          {
+            "name": "./node_modules/axios/lib/core/settle.js",
+            "size": 757,
+            "id": 23
+          },
+          {
+            "name": "./node_modules/axios/lib/core/enhanceError.js",
+            "size": 592,
+            "id": 24
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/buildURL.js",
+            "size": 1576,
+            "id": 25
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/parseHeaders.js",
+            "size": 784,
+            "id": 26
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+            "size": 2245,
+            "id": 27
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/btoa.js",
+            "size": 986,
+            "id": 28
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/cookies.js",
+            "size": 1365,
+            "id": 29
+          },
+          {
+            "name": "./node_modules/axios/lib/core/InterceptorManager.js",
+            "size": 1251,
+            "id": 30
+          },
+          {
+            "name": "./node_modules/axios/lib/core/dispatchRequest.js",
+            "size": 1940,
+            "id": 31
+          },
+          {
+            "name": "./node_modules/axios/lib/core/transformData.js",
+            "size": 550,
+            "id": 32
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+            "size": 563,
+            "id": 33
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/combineURLs.js",
+            "size": 380,
+            "id": 34
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/CancelToken.js",
+            "size": 1240,
+            "id": 35
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/spread.js",
+            "size": 564,
+            "id": 36
+          },
+          {
+            "name": "./resources/assets/sass/app.scss",
+            "size": 41,
+            "id": 37
+          }
+        ]
+      }
+    ],
+    "pureCssSize": 3949,
+    "unPureCssSize": 15361
+  }
+]
